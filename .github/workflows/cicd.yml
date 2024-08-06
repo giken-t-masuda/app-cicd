@@ -4,7 +4,7 @@ on:
         paths:
             - '.github/workflows/**'
             - 'cicd-section/api/**' 
-
+# 環境変数
 env:
     AWS_REGION: ap-northeast-1
     ECS_CLUSTER: t-masuda-cicd
