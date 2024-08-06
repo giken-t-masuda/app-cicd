@@ -75,7 +75,7 @@ jobs:
 
       - name: Define the image uri
         run: |
-          echo "API_IMAGE_URI=$(cat artifacts/api-image-uri.txt)" >> $GITHUB_ENV
+          echo "API_IMAGE_URI=$(cat artifacts/app-image-uri.txt)" >> $GITHUB_ENV
 
       - name: Fill in the new image URI in the task definition
         id: render-task-def
