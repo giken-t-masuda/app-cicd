@@ -9,12 +9,21 @@ permissions:
     contents: read
 jobs:
   # Test
-  test-and-build:
+  test:
       runs-on: ubuntu-latest
       steps:
           # Checkout code
           - uses: actions/checkout@v4
-          - name: Run Tests and Build
+          - name: ひとまずテスト
+            run: |
+              echo GITHUB_WORKSPACE = ${GITHUB_WORKSPACE}
+              echo GITHUB_OUTPUT = ${GITHUB_OUTPUT}
+  build:
+      runs-on: ubuntu-latest
+      steps:
+          # Checkout code
+          - uses: actions/checkout@v4
+          - name: 次にビルド
             run: |
               echo GITHUB_WORKSPACE = ${GITHUB_WORKSPACE}
               echo GITHUB_OUTPUT = ${GITHUB_OUTPUT}
