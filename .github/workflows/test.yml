@@ -2,8 +2,7 @@ name: Test actions environment
 on:
   push:
       paths:
-          - '.github/workflows/**'
-          - 'cicd-section/api/**' 
+          - '.github/workflows/test.yml'
 permissions:
     id-token: write
     contents: read
