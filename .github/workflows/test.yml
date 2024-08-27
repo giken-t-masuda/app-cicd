@@ -1,0 +1,20 @@
+name: Test actions environment
+on:
+  push:
+      paths:
+          - '.github/workflows/**'
+          - 'cicd-section/api/**' 
+permissions:
+    id-token: write
+    contents: read
+jobs:
+  # Test
+  test-and-build:
+      runs-on: ubuntu-latest
+      steps:
+          # Checkout code
+          - uses: actions/checkout@v4
+          - name: Run Tests and Build
+            run: |
+              echo GITHUB_WORKSPACE = ${GITHUB_WORKSPACE}
+              echo GITHUB_OUTPUT = ${GITHUB_OUTPUT}
